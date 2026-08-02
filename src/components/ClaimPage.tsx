@@ -110,15 +110,17 @@ function InstagramBanner() {
   );
 }
 
-// ─── Google color dots logo ───────────────────────────────────────────────────
-function GdgDots() {
+// ─── GDG SVG Logo ─────────────────────────────────────────────────────────────
+function GdgLogo() {
   return (
-    <div className="grid grid-cols-2 gap-[5px]">
-      <div className="w-3 h-3 rounded-full bg-[#4285F4]" />
-      <div className="w-3 h-3 rounded-full bg-[#EA4335]" />
-      <div className="w-3 h-3 rounded-full bg-[#FBBC05]" />
-      <div className="w-3 h-3 rounded-full bg-[#34A853]" />
-    </div>
+    <Image
+      src="/assets/gdg-logo.svg"
+      alt="GDG Logo"
+      width={36}
+      height={36}
+      className="w-9 h-9 object-contain shrink-0"
+      priority
+    />
   );
 }
 
@@ -241,7 +243,7 @@ export default function ClaimPage() {
       {/* ── Header ─────────────────────────────────────────────────────────── */}
       <header className="w-full max-w-sm px-6 pt-12 pb-4 flex flex-col items-center gap-4">
         <div className="flex items-center gap-3">
-          <GdgDots />
+          <GdgLogo />
           <span className="text-xs font-semibold tracking-[0.22em] text-zinc-400 uppercase">
             GDG MITWPU
           </span>
@@ -327,7 +329,7 @@ export default function ClaimPage() {
       {/* ── Footer ─────────────────────────────────────────────────────────── */}
       <footer className="w-full flex items-center justify-center mt-auto pt-12">
         <p className="text-xs text-zinc-700 tracking-wider">
-          GDG MITWPU Akinator · Photos by Cloudinary
+          GDG MITWPU Akinator
         </p>
       </footer>
     </main>
